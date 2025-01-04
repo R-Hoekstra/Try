@@ -1,0 +1,471 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+#header {
+  display: flex;
+  flex-direction: row; /* Default row alignment for larger screens */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  position: fixed; /* Keep header at the top during scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(244, 244, 244, 0); /* Transparent initially */
+  transition: background-color 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+#header.hidden {
+  opacity: 0;
+  pointer-events: none; /* Inaccessible when hidden */
+}
+
+#header.visible {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8); /* Light background */
+}
+
+/* Name Container */
+/* #name-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+} */
+
+#name-container {
+  position: static; /* Reset absolute positioning */
+  flex-grow: 1; /* Allow it to take available space */
+  text-align: center; /* Center-align text within the container */
+}
+
+#name-container a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+#name-container a:hover .name {
+  color: rgb(127, 23, 52);
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2.5rem); 
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Navigation Menu */
+#wb_CssMenu1 {
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  right: 20px;
+  text-align: right;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: clamp(0.6rem, 1.1vw, 1.6rem);
+}
+
+.nav-link.active {
+  color: rgb(127, 23, 52);
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  transform: scale(0);
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::before {
+  transform: scale(1);
+}
+
+.nav-link:hover {
+  color: rgb(127, 23, 52);
+}
+
+/* Navigation Styling */
+.navigation {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  text-align: left;
+}
+
+.navigation-text {
+  margin: 0;
+  color: white;
+  text-align: left;
+  margin-bottom: 2%; /* Added percentage-based spacing between texts */
+}
+
+/* School Assignment (Bold, Clean Font) */
+.school-assignment {
+  font-weight: bold;
+  font-family: Arial, sans-serif; /* Clean, minimalistic font */
+  font-size: clamp(2rem, 2vw, 2.5rem); /* Responsive font size based on viewport width */
+}
+
+/* Vacation Home Button */
+.vacation-home-button {
+  font-weight: normal; /* Not bold */
+  font-size: clamp(1rem, 1vw, 1.5rem);  /* Font size adjusts based on viewport width */
+  padding: 2% 3%; /* Padding around the text */
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  display: inline-block; /* Ensures the button only takes the width of the text */
+  text-align: center; /* Centers the text within the button */
+}
+
+.vacation-home-button:hover {
+  background-color: white;
+  color: #333; /* Inverted color */
+  background: (to top, #fff); /* Left to right fade effect */
+}
+
+/* Zwolle, Overijsel Text */
+.zwolle-text {
+  padding-top: 3px;
+  font-size: clamp(1rem, 1vw, 1.5rem); /* Smaller responsive font size */
+  color: white;
+  font-style: italic; /* Italics */
+  font-weight: normal; /* Not bold */
+}
+
+/* Section Styling */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#section1.bg-image {
+  background-image: url('./images/finalrender-000_1\ -\ Photo.jpg');
+}
+
+#section2.bg-image {
+  background-image: url('./images/rendercampus_bewerkt.jpg');
+}
+
+#section3.bg-image {
+  background-image: url('./images/renderv1.jpg');
+}
+
+#section4.bg-image {
+  background-image: url('./images/renderbewerkt.jpg');
+}
+
+ 
+#section1.bg-image::before, 
+#section2.bg-image::before,
+#section3.bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Grey overlay with 40% opacity */
+  z-index: 0; /* Ensure the overlay stays behind the text and buttons */
+}
+
+.content {
+  position: relative;
+}
+
+/* Content Wrappers */
+.content-wrapper-home, .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 80%;
+  width: 95%;
+  margin-top: 7%;
+  border-radius: 10px;
+  gap: 20%;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 95%;
+  width: 100%;
+  padding-left: 2%;
+}
+
+.image-wrapper {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-caption {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #f9f9f9;
+  text-align: left;
+}
+
+.content {
+  /*background: rgba(0, 0, 0, 0.8);*/
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Image Hover Effect */
+.clickable-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  padding-top: 3%;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#caption {
+  margin: 15px 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 20px;
+}
+
+/* Footer Styling */
+#footer {
+  background-color: rgba(0, 0, 0, 1); /* Dark background */
+  color: rgb(255, 255, 255); /* White text */
+  text-align: center; /* Horizontally centers the text */
+  width: 100%; /* Full-width footer */
+  height: 6vh; /* Fixed height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+.footer-content {
+  text-align: center; /* Ensures content is centered within its container */
+}
+
+.footer-content p {
+  margin: 0; /* Remove default margins on the paragraph */
+  font-size: 0.9rem; /* Adjust the font size */
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  #header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    padding: 0 20px;
+  }
+
+  #name-container {
+    text-align: center; /* Ensure text is centered */
+    flex-grow: 0; /* Prevent stretching */
+  }
+
+  .name {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+  }
+
+  /* Navigation Menu */
+  #wb_CssMenu1 {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    transition: width 0.3s ease;
+  }
+
+  .menu-overlay.active {
+    width: 160px;
+  }
+
+  /* Style for the toggle button */
+  .menu-toggle {
+    display: block;
+    font-size: clamp(1.4rem, 1.8vh, 1.9rem);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+
+  .menu-toggle::before {
+    content: "☰";
+  }
+
+  .menu-toggle.active::before {
+    content: "✖";
+    color: rgba(244, 244, 244);
+  }
+
+  /* Navigation menu items */
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: right;
+  }
+
+  .nav-link {
+    font-size: clamp(1.3rem, 2vw, 1.3rem);
+    color: rgba(244, 244, 244);
+  }
+
+  .nav-link:hover {
+    color: rgb(127, 23, 52);
+  }
+
+/* School Assignment (Bold, Clean Font) */
+.school-assignment {
+  font-size: clamp(1.3rem, 3vw, 2.5rem); /* Responsive font size based on viewport width */
+}
+
+/* Vacation Home Button */
+.vacation-home-button {
+  font-size: clamp(0.7rem, 1.8vw, 1.5rem); /* Font size adjusts based on viewport width */
+}
+
+/* Zwolle, Overijsel Text */
+.zwolle-text {
+  font-size: clamp(0.7rem, 1.8vw, 1.5rem); /* Smaller responsive font size */
+}
+}
+
+@media (min-width: 1201px) {
+  .menu-toggle {
+    display: none; /* Hide the toggle button on larger screens */
+  }
+
+  .nav {
+    display: flex;
+  }
+}

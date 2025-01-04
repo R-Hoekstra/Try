@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Style3.css" rel="stylesheet">
+    <link href="StyleInfo.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div id="name-container">
+            <a class="nav-link" href="#sectionVaction1">
+                <h1 class="name">THE WOOD COMMUNITY</h1>
+            </a>
+        </div>
+        <!-- The Hamburger Button (Only one) -->
+        <button class="menu-toggle"></button>  <!-- Button will hold the hamburger icon -->
+        <div class="menu-overlay"></div> <!-- Background Overlay -->       
+        <div id="wb_CssMenu1">
+            <ul id="CssMenu1" class="nav">
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="#sectionVaction1">Contact</a></li>
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="index.html">Back</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Full-Screen Sections with Background Images -->
+    <main>
+        <section id="sectionVaction1">
+            <div class="content-wrapper-info">
+                <div class="content">
+                    <div class="image-container">
+                        <div class="image-wrapper">
+                            <img src="images/finalrender-000_1 - Photo.jpg" class="clickable-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionVaction2">
+            <div class="content-wrapper-home">
+                <div class="content">
+                    <div class="image-container">
+                        <div class="image-wrapper">
+                            <img src="images/finalrender-000_3 - Photo.jpg" alt="No Hangups" class="clickable-image">
+                        </div>
+                        <h2 class="image-caption">No Hangups</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionVaction3">
+            <div class="content-wrapper-vacationHome">
+                <div class="content">
+                    <h2>Welcome 3</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Modal for Image Popup -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Thijs Smit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scriptAttempt3.js"></script>
+</body>
+</html>

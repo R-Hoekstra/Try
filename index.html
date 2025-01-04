@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Style3.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div id="name-container">
+            <a class="nav-link" href="#section1">
+                <h1 class="name">THIJS SMIT</h1>
+                <!--<h1 class="name">SMIT</h1>   --> 
+            </a>
+        </div>
+         <!-- The Hamburger Button (Only one) -->
+         <button class="menu-toggle"></button>  <!-- Button will hold the hamburger icon -->
+         <div class="menu-overlay"></div> <!-- Background Overlay -->       
+        <div id="wb_CssMenu1">
+            <ul id="CssMenu1" class="nav">
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="#section1">Home</a></li>
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="#section2">Work</a></li>
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="#section3">About</a></li>
+               <li role="menuitem" class="nav-item"><a class="nav-link" href="secondTry.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Full-Screen Sections with Background Images -->
+    <main>
+        <section id="section1" class="bg-image">
+            <div class="content-wrapper-home">
+                <div class="content">
+                    <div class="navigation">
+                        <h2 class="navigation-text school-assignment">School Assigment | Design</h2>
+                        <a href="secondTry.html"><h2 class="navigation-text vacation-home-button">THE WOOD COMMUNITY</h2></a>
+                        <h2 class="navigation-text zwolle-text">Gothenburg, Sweden 2024</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section2" class="bg-image">
+            <div class="content-wrapper-home">
+                <div class="content">
+                    <div class="navigation">
+                        <h2 class="navigation-text school-assignment">School Assigment | Redesign</h2>
+                        <a href="vacationhome.html"><h2 class="navigation-text vacation-home-button">CULTURE ROOF ZWOLLE ZUID</h2></a>
+                        <h2 class="navigation-text zwolle-text">Zwolle, Netherlands 2022</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section3" class="bg-image">
+            <div class="content-wrapper-home">
+                <div class="content">
+                    <div class="navigation">
+                        <h2 class="navigation-text school-assignment">School Assigment | Design</h2>
+                        <a href="vacationhome.html"><h2 class="navigation-text vacation-home-button">SPORTPARK MARSLANDEN</h2></a>
+                        <h2 class="navigation-text zwolle-text">Zwolle, Netherlands 2023</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section4" class="bg-image">
+            <div class="content-wrapper-home">
+                <div class="content">
+                    <div class="navigation">
+                        <h2 class="navigation-text school-assignment">School Assigment | Design</h2>
+                        <a href="vacationhome.html"><h2 class="navigation-text vacation-home-button">VACATION HOME BUITENWAARDEN</h2></a>
+                        <h2 class="navigation-text zwolle-text">Zwolle, Netherlands 2021</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Modal for Image Popup -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Thijs Smit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scriptAttempt3.js"></script>
+</body>
+</html>
